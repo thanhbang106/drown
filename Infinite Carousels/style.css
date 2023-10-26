@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infinite-carousel{
+    margin: 2em 0;
+    max-width: 1000px;
+    width: 90%;
+    overflow: hidden;
+    -webkit-mask:linear-gradient(
+        90deg,
+        transparent,
+        #fff 30%,
+        #fff 80%,
+        transparent
+    );
+    mask: linear-gradient(
+        90deg,
+        transparent,
+        #fff 30%,
+        #fff 80%,
+        transparent
+    );
+}
+
+.infinite-carousel > div{
+    width: max-content;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap:3em;
+    list-style: none;
+}
+
+.infinite-carousel img {
+    max-width: 20em;
+}
+
+@keyframes move{
+    to{
+        transform: translate(calc(-50% - 1.5em));
+    }
+}
